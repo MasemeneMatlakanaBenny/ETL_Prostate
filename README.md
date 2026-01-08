@@ -76,6 +76,7 @@ From there,we then combine these tasks into a flow ,which is the sequence or ord
 
 The following are the pipelines of the workflow:
 
+----
 #### Extraction Pipeline:
 The tasks for the extraction pipeline in which they will form the flow of the extraction pipeline. 
 Create Engine using SQLAlchemy to connect to the database ->
@@ -84,6 +85,8 @@ Save the extracted data.
 The file for the pipeline :
 
 src/pipelines/phase_pipelines/extract_pipeline.py
+
+----
 
 #### Extraction Validation Pipeline:
 The tasks for the pipeline for validating the extracted data in which they will from the flow of the extraction validation pipeline.
@@ -97,6 +100,8 @@ Save it to the data folder in a csv format.
 The file for the pipeline :
 
 src/pipelines/validation_pipelines/extract_vals_pipeline.py
+
+----
 
 #### Meta Extraction Validation Pipeline:
 The tasks for the pipeline for validating the validated results in which they will from the flow of the meta extraction validation pipeline.
@@ -112,6 +117,8 @@ The file for the pipeline :
 
 src/pipelines/validation_pipelines/meta_extract_vals_pipeline.py
 
+-----
+
 #### Transformation Pipeline:
 The tasks for transformation pipeline in which they will form the flow of the transformation pipeline.
 Get the extracted data using pandas->
@@ -122,6 +129,8 @@ save the transformed data in the data folder in a csv format.
 The file for the pipeline :
 
 src/pipelines/phase_pipelines/transform_pipeline.py
+
+----
 
 #### Loading Pipeline :
 The tasks for pipeline that are to be followed for a successful data loading workflow into the AI lakehouse.
